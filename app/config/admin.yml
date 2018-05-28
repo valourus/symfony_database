@@ -4,3 +4,6 @@ easy_admin:
         - AppBundle\Entity\Product
         - AppBundle\Entity\Invoice
         - AppBundle\Entity\Customer
+        - AppBundle\Entity\BTW
+        - AppBundle\Entity\StaffGroup
+        - AppBundle\Entity\StaffDiscount

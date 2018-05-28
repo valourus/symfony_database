@@ -38,7 +38,11 @@ class StaffDiscount
      * @ORM\ManyToOne(targetEntity="StaffGroup")
      * @ORM\JoinColumn(name="staff_group_id", referencedColumnName="staff_group_id")
      */
-    private $staff_groups;
+    public $staff_groups;
+
+    public function __toString() {
+        return $this->discount . " ";
+    }
 
     public function getId()
     {

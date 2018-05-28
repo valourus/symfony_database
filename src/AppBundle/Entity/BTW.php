@@ -22,6 +22,10 @@ class BTW
      */
     private $percentage;
 
+    public function __toString() {
+      return $this->percentage . "";
+    }
+
     public function getId()
     {
         return $this->id;

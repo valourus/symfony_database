@@ -43,8 +43,8 @@ class Product
     }
 
     public function setBtw($value) {
-      return $this->btw = $value;
-    }
+      return $this->btw = $value;  
+   }
 
     public function getStaffGroups() {
       return $this->staff_groups;
