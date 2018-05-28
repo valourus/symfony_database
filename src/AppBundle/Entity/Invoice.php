@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table(name="invoices")
- * @ORM\Entity(repositoryClass="App\Repository\InvoiceRepository")
+ * @ORM\Entity()
  */
 class Invoice
 {
@@ -37,7 +37,15 @@ class Invoice
      */
     private $customer;
 
-    public function getId()
+    public function getCustomer() {
+      return $this->customer;
+    }
+
+    public function setCustomer($value) {
+      $this->customer = $value;
+    }
+
+    public function getreference_number()
     {
         return $this->reference_number;
     }

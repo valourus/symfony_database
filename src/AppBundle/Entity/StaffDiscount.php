@@ -7,7 +7,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Table(name="staff_discounts")
- * @ORM\Entity(repositoryClass="App\Repository\StaffDiscountRepository")
+ * @ORM\Entity()
  * @UniqueEntity("min_amount, max_amount")
  */
 class StaffDiscount

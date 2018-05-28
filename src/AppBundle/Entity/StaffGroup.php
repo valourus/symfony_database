@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table(name="staff_groups")
- * @ORM\Entity(repositoryClass="App\Repository\StaffGroupRepository")
+ * @ORM\Entity()
  */
 class StaffGroup
 {

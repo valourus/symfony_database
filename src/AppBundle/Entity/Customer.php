@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table(name="customers")
- * @ORM\Entity(repositoryClass="App\Repository\CustomerRepository")
+ * @ORM\Entity()
  */
 class Customer
 {
@@ -56,6 +56,10 @@ class Customer
      * @ORM\Column(type="string", length=255)
      */
     private $phone;
+
+    public function __toString() {
+      return $this->first_name . " " . $this->last_name;
+    }
 
     public function getId()
     {

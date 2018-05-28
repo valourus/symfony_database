@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table(name="products")
- * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
+ * @ORM\Entity()
  */
 class Product
 {
@@ -37,6 +37,23 @@ class Product
      * @ORM\JoinColumn(name="staff_group_id", referencedColumnName="staff_group_id")
      */
     private $staff_groups;
+
+    public function getBtw() {
+      return $this->btw;
+    }
+
+    public function setBtw($value) {
+      return $this->btw = $value;
+    }
+
+    public function getStaffGroups() {
+      return $this->staff_groups;
+    }
+
+    public function setStaffGroups($value) {
+      $this->staff_groups = $value;
+      return $this;
+    }
 
     public function getId()
     {
